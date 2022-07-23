@@ -1,0 +1,22 @@
+.card:hover{
+    background-color: lightsteelblue;
+    cursor: pointer;
+}
+
+.cut-text { 
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 160px; 
+    height: 1.2em; 
+    white-space: nowrap;
+  }
+
+  .card{
+    max-width: 200px;
+  }
+
+  img{
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }

@@ -1,0 +1,36 @@
+<h4>Top Played</h4>
+<br>
+<br>
+<div *ngIf="topPlayed.length > 0; else elseBlock" class="row row-cols-1 row-cols-md-6 g-4 scr">
+    <div *ngFor="let s of topPlayed" class="col ">
+        <app-song-card [songsList]="topPlayed" [song]="s"></app-song-card>
+    </div>
+</div>
+<ng-template #elseBlock>No Songs Found.</ng-template>
+
+<br>
+<br>
+<hr>
+
+<h4>Most Liked</h4>
+<br>
+<br>
+<div *ngIf="mostLiked.length > 0; else elseBlock" class="row row-cols-1 row-cols-md-6 g-4">
+    <div *ngFor="let s of mostLiked" class="col">
+        <app-song-card [songsList]="mostLiked" [song]="s"></app-song-card>
+    </div>
+</div>
+<ng-template #elseBlock>No Songs Found.</ng-template>
+<br>
+<br>
+<hr>
+
+<h4>Random Songs</h4>
+<br>
+<br>
+<div *ngIf="random.length > 0; else elseBlock" class="row row-cols-1 row-cols-md-6 g-4">
+    <div *ngFor="let s of random" class="col">
+        <app-song-card [songsList]="random" [song]="s"></app-song-card>
+    </div>
+</div>
+<ng-template #elseBlock>No Songs Found.</ng-template>

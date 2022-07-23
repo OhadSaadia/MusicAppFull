@@ -1,0 +1,21 @@
+<div class="card h-100">
+    <img src={{artist.imageSrc}} class="card-img-top"
+        alt="../../../assets/defaultArtistPic"
+        onerror="this.onerror=null;this.src=this.alt;">
+
+    <div class="card-body">
+        <h6 class="card-title">{{artist.stageName}}</h6>
+        <p class="card-text">
+            Name: {{artist.firstName}} {{artist.lastName}} <br />
+            Cuontry: {{country}}
+        </p>
+        <br>
+        <div class="buttons">
+            <button (click)="onDetailesClick()" class="btn btn-primary btn-sm m-1">See Details</button>
+            <span *ngIf="isUserConnected">
+                <button *ngIf="!isFollowed" (click)="onFollowClick()" class="btn btn-secondary btn-sm">Follow +</button>
+                <button *ngIf="isFollowed" (click)="onFollowClick()" class="btn btn-primary btn-sm">Unfollow -</button>
+            </span>
+        </div>
+    </div>
+</div>

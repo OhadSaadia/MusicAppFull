@@ -1,0 +1,18 @@
+img:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.cut-text { 
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 160px; 
+    height: 1.2em; 
+    white-space: nowrap;
+  }
+
+  img{
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}

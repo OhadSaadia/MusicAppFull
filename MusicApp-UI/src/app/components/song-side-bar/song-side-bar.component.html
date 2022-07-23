@@ -1,0 +1,32 @@
+<div class="container">
+    <h3>Next Track:</h3>
+    <hr> 
+    <div class="row" *ngFor="let s of songs">
+        <div *ngIf="s.id === selectedSongId; else elseBlock">
+            <a class="btn btn-secondary " (click)="onClick(s)">
+                <div class="col-6">
+                    <img src={{s.imageSrc}} class="card-img-top" 
+                         alt="../../../assets/defaultSongPic.jpg"
+                         onerror = "this.onerror=null;this.src=this.alt;"  
+                         title="Play">
+                </div>
+                <div class="col-6 cut-text">
+                    {{s.name}}
+                </div>
+            </a>
+        </div>
+        <ng-template #elseBlock>
+            <a class="btn btn-light " (click)="onClick(s)">
+                <div class="col-6">
+                    <img src={{s.imageSrc}} class="card-img-top" 
+                         alt="../../../assets/defaultSongPic.jpg"
+                         onerror = "this.onerror=null;this.src=this.alt;"  
+                         title="Play">
+                </div>
+                <div class="col-6 cut-text">
+                    {{s.name}}
+                </div>
+            </a>
+        </ng-template>
+    </div>
+</div>

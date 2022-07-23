@@ -1,0 +1,21 @@
+<div class="card h-100">
+    <img src={{song.imageSrc}} class="card-img-top" 
+         alt="../../../assets/defaultSongPic.jpg"
+         onerror = "this.onerror=null;this.src=this.alt;"
+         (click)="onBannerClick()"
+         title="Play">
+    <div class="card-body">
+      <h6 class="card-title cut-text"  title="{{song.name}} - {{song.artist.stageName}}" > {{song.name}} - {{song.artist.stageName}}</h6>
+      <p class="card-text" style="font-size: 14px;">
+        Duration: {{song.duration | date:'mm:ss'}}<br/>
+        Watched: {{song.watched}}<br/>
+        Genre: {{genreName}} <br/>
+        Date Published: {{song.datePublished | date:'YYYY/MM/dd'}}
+        <br/>
+      </p>
+      <span *ngIf="isUserConnected">
+        <button *ngIf="!isLiked" (click)="onLikeClick()" class="btn btn-secondary btn-sm">Like +</button>
+        <button *ngIf="isLiked" (click)="onLikeClick()" class="btn btn-primary btn-sm">Unlike -</button>
+    </span>
+    </div>
+  </div>

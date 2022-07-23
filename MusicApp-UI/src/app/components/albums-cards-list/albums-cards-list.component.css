@@ -1,0 +1,10 @@
+.contant{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{ 
+    display: grid;
+    margin-right: 20px;
+    width: 12rem;
+}

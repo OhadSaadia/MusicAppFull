@@ -1,0 +1,98 @@
+<div id="signUp">
+
+    <h1>Sign Up</h1>
+    
+    <form #signUpForm="ngForm" (submit)="onSignUp(signUpForm.value)">
+
+    <!-- The Alert -->
+    <ngb-alert *ngIf="!isAuthentical && signUpForm.submitted" [dismissible]="false" type="danger">
+      <strong>Credentials!</strong>Email Cannot be used. Please try different email.
+    </ngb-alert>
+
+    <br>
+    <!-- The Inputs --> 
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input ngModel 
+      name="firstName" 
+      #firstName="ngModel"
+      type="firstName" 
+      class="form-control" 
+      id="firstName"
+      required
+      minlength="2"
+      >
+      <div class="text-danger" *ngIf="firstName.invalid && firstName.touched"> 
+        First Name must be at list 2 digits
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input ngModel 
+      name="lastName" 
+      #lastName="ngModel"
+      type="lastName" 
+      class="form-control" 
+      id="lastName"
+      required
+      minlength="2"
+      >
+      <div class="text-danger" *ngIf="lastName.invalid && lastName.touched"> 
+        Last Name must be at list 2 digits
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input ngModel
+      name="email" 
+      type="email" 
+             #email="ngModel"
+             class="form-control" 
+             id="email" 
+             aria-describedby="emailHelp"
+             required
+             email>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <div class="text-danger" *ngIf="email.invalid && email.touched">
+        Email invalid
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input ngModel 
+      name="password" 
+      #password="ngModel"
+      type="password" 
+      class="form-control" 
+      id="password"
+      required
+      minlength="5"
+      >
+      <div class="text-danger" *ngIf="password.invalid && password.touched"> 
+        password must be at list 5 digits
+      </div>
+    </div>
+    <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input ngModel 
+        name="confirmPassword" 
+        #confirmPassword="ngModel"
+        type="password" 
+        class="form-control" 
+        id="confirmPassword"
+        required
+        ismatch="password"
+        minlength="5"
+        >
+        <div class="text-danger" *ngIf="confirmPassword.invalid && confirmPassword.touched"> 
+          Confirm password must match passward
+        </div>
+      </div>
+   
+
+
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+     &nbsp; Allrady have an account? <a routerLink="/login">Login</a>
+  </form>
+</div>

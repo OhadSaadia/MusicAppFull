@@ -1,0 +1,24 @@
+.card:hover{
+    border: 1px solid black;
+}
+
+.card{
+    max-width: 200px;
+   
+}
+
+.buttons{
+    font-size: 12px;
+    position: absolute;
+    bottom: 4px;
+}
+
+.card-text{
+    font-size: 14px;
+}
+
+img{
+inline-size: 100%;
+aspect-ratio: 16/13;
+object-fit: cover;
+}

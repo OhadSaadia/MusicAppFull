@@ -1,0 +1,10 @@
+
+<h1>{{title}}</h1>
+<br>
+<br>
+<div *ngIf="songs.length > 0; else elseBlock" class="row row-cols-1 row-cols-md-6 g-4">
+    <div  *ngFor="let s of songs" class="col">
+    <app-song-card [songsList]="songs" [song]="s"></app-song-card>
+    </div>
+  </div>
+  <ng-template #elseBlock>No Songs Found.</ng-template>   

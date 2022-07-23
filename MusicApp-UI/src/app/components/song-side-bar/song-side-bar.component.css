@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.btn-light{
+    opacity: 0.90;
+}
+
+.btn-light:hover{
+    opacity:1;
+}
+
+.btn-light:active{
+    opacity: 0.5;
+}
+
+.btn-secondary{
+    background-color: rgb(143, 143, 143);
+}
+
+
+.cut-text { 
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 160px; 
+    height: 1.2em; 
+    white-space: nowrap;
+  }
+
+  .card-img-top{
+    max-width: 130px;
+    max-height: 60px;
+  }

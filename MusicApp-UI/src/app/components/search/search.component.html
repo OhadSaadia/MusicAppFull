@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-12">
+        <form #searchForm="ngForm" (submit)="onSearch(searchForm.value)">
+
+            <label for="searchText" class="form-label">Search:</label>
+            <input type="text"
+                    class="form-control"
+                    ngModel
+                    [(ngModel)]="searchText"
+                    name="searchText"
+                    required
+                    >            
+            <div class="form-group">
+                <select class="form-select" 
+                        [(ngModel)]="searchBy"
+                        ngModel
+                        name="searchBy"> {{searchBy}}
+                  <option value="Song" >Song</option>
+                  <option value="Artist">Artist</option>
+                </select>
+            </div> 
+            <button class="btn btn-outline-secondary" type="submit">Search</button>       
+        </form>                         
+    </div>
+
+</div>

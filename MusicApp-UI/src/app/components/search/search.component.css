@@ -1,0 +1,21 @@
+.form-group {
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.form-label {
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.form-control {
+    width: 600px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.form-select:hover {
+    cursor: pointer;
+}

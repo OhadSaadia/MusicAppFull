@@ -1,0 +1,75 @@
+{
+    "users" : [
+        {
+            "id": "1",
+            "firstName": "ohad",
+            "lastName": "saadia",
+            "email": "ohad123@gmail.com",
+            "password": "a1111"
+        }
+    ] ,
+    
+    "songs" : [
+        {
+            "id" : 1,
+            "name" : "lirot et hake'ev",
+            "artistId" : 1,
+            "watched" : 4,
+            "duration" : "07:26",
+            "publisherId" : 4,
+            "datePublished" : "2019-01-03",
+            "albumId" :1,
+            "genreId" :1,
+            "youtubeSrc" : ""
+          },
+          {
+            "id" : 2,
+            "name" : "l'ev",
+            "artistId" : 1,
+            "watched" : 4,
+            "duration" : "07:26",
+            "publisherId" : 4,
+            "datePublished" : "2019-01-03",
+            "albumId" :1,
+            "genreId" :1,
+            "youtubeSrc" : ""
+          },
+          {
+            "id" : 3,
+            "name" : " et ha",
+            "artistId" : 1,
+            "watched" : 4,
+            "duration" : "07:26",
+            "publisherId" : 4,
+            "datePublished" : "2019-01-03",
+            "albumId" :1,
+            "genreId" :1,
+            "youtubeSrc" : ""
+          },
+          {
+            "id" : 4,
+            "name" : " tata",
+            "artistId" : 1,
+            "watched" : 4,
+            "duration" : "07:26",
+            "publisherId" : 4,
+            "datePublished" : "2019-01-03",
+            "albumId" :1,
+            "genreId" :1,
+            "youtubeSrc" : ""
+          }               
+    ],
+
+    "songs_users" : [
+          {
+            "id":1,
+            "songid":1,
+            "userid":1
+          },
+          {
+            "id":2,
+            "songid":2,
+            "userid":1
+          }
+    ]
+}

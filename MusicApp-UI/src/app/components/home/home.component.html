@@ -1,0 +1,23 @@
+<h1 id="logo" routerLink="/" title="Home">Music App </h1>
+<div class="container-fluid">
+    <div class="search">
+        <div class="d-md-flex justify-content-md-end">
+            <button routerLink="/" class="btn btn-primary me-md-2">Home</button>
+            <a routerLink="/login" *ngIf="!isConnected" class="btn btn-primary me-md-2" type="button">Login</a>        
+            <a routerLink="/signup" *ngIf="!isConnected" class="btn btn-primary me-md-2" type="button">SignUp</a>        
+        </div>
+        <app-search></app-search>
+    </div>
+    <div class="page">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="sidebar">
+        <app-side-menu  *ngIf="isConnected"></app-side-menu>
+    </div>
+    <div class="footer">
+        footer
+    </div>
+</div>
+
+
+
